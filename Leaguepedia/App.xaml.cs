@@ -1,12 +1,14 @@
-﻿using Microsoft.UI.Xaml;
+﻿using System;
+
+using Microsoft.Toolkit.Uwp.Notifications;
+using Microsoft.UI.Xaml;
 
 using Windows.ApplicationModel;
+using Windows.ApplicationModel.Background;
 
-// To learn more about WinUI, the WinUI project structure,
-// and more about our project templates, see: http://aka.ms/winui-project-info.
-
-namespace Gamepedia.Lol
+namespace Gamepedia.Leaguepedia
 {
+#nullable enable
 	/// <summary>
 	/// Provides application-specific behavior to supplement the default Application class.
 	/// </summary>
@@ -22,6 +24,16 @@ namespace Gamepedia.Lol
 		{
 			InitializeComponent();
 			Suspending += OnSuspending;
+
+			// Listen to toast notification activations
+			ToastNotificationManagerCompat.OnActivated += e =>
+			{
+				switch (e.Argument)
+				{
+					case "left":
+						throw new NotImplementedException();
+				}
+			};
 		}
 
 		/// <summary>
@@ -29,10 +41,33 @@ namespace Gamepedia.Lol
 		/// will be used such as when the application is launched to open a specific file.
 		/// </summary>
 		/// <param name="args">Details about the launch request and process.</param>
-		protected override void OnLaunched(LaunchActivatedEventArgs args)
+		protected override async void OnLaunched(LaunchActivatedEventArgs args)
 		{
 			window = new MainWindow();
 			window.Activate();
+			var taskRegistered = false;
+			await BackgroundExecutionManager.RequestAccessAsync();
+
+			foreach (var task in BackgroundTaskRegistration.AllTasks)
+			{
+				if (task.Value.Name == "LoadLeaguepediaData")
+				{
+					taskRegistered = true;
+					break;
+				}
+			}
+
+			if (taskRegistered is false)
+			{
+				var builder = new BackgroundTaskBuilder
+				{
+					Name = "LoadLeaguepediaData",
+					TaskEntryPoint = "Gamepedia.Background.Leaguepedia.FetchData"
+				};
+				builder.SetTrigger(new TimeTrigger(15, false));
+				builder.AddCondition(new SystemCondition(SystemConditionType.InternetAvailable));
+				builder.Register();
+			}
 		}
 
 		/// <summary>

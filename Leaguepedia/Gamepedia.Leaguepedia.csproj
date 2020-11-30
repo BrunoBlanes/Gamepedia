@@ -24,6 +24,11 @@
 		<PackageReference Include="Microsoft.Toolkit.Uwp.Notifications" Version="8.0.0-preview3" />
 		<PackageReference Include="Microsoft.VCRTForwarders.140" Version="1.0.7" />
 		<PackageReference Include="Microsoft.WinUI" Version="3.0.0-preview3.201113.0" />
+		<PackageReference Include="System.Text.Json" Version="5.0.0" />
 		<Manifest Include="$(ApplicationManifest)" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <ProjectReference Include="..\Core\Gamepedia.Core.csproj" />
 	</ItemGroup>
 </Project>

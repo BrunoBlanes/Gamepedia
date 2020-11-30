@@ -5,6 +5,7 @@ using Microsoft.UI.Xaml;
 
 using Windows.ApplicationModel;
 using Windows.ApplicationModel.Background;
+using Windows.Storage;
 
 namespace Gamepedia.Leaguepedia
 {

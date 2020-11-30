@@ -1,6 +1,7 @@
 ﻿using System;
+using System.Collections.ObjectModel;
 
-namespace Gamepedia.Leaguepedia.Models
+namespace Gamepedia.Core.Models
 {
 	public sealed class News
 	{

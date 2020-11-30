@@ -6,11 +6,11 @@ using System.Net.Http;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 
-using Gamepedia.Leaguepedia.Models;
+using Gamepedia.Core.Models;
 
 using HtmlAgilityPack;
 
-namespace Gamepedia.Leaguepedia.Services
+namespace Gamepedia.Core.Services
 {
 #nullable enable
 	public static class Client

@@ -10,7 +10,7 @@
 			  Version="1.0.0.0" />
 
 	<Properties>
-		<DisplayName>Gamepedia.Package</DisplayName>
+		<DisplayName>Gamepedia</DisplayName>
 		<PublisherDisplayName>bruno</PublisherDisplayName>
 		<Logo>Images\StoreLogo.png</Logo>
 	</Properties>
@@ -32,8 +32,8 @@
 		<Application Id="App"
 					 Executable="$targetnametoken$.exe"
 					 EntryPoint="$targetentrypoint$">
-			<uap:VisualElements DisplayName="Gamepedia.Package"
-								Description="Gamepedia.Package"
+			<uap:VisualElements DisplayName="Gamepedia"
+								Description="Gamepedia Client for Windows"
 								BackgroundColor="transparent"
 								Square150x150Logo="Images\Square150x150Logo.png"
 								Square44x44Logo="Images\Square44x44Logo.png">
@@ -42,7 +42,7 @@
 			</uap:VisualElements>
 			<Extensions>
 				<Extension Category="windows.backgroundTasks"
-						   EntryPoint="Gamepedia.Background.Leaguepedia.FetchData">
+						   EntryPoint="Gamepedia.Background.Lol.FetchData">
 					<BackgroundTasks>
 						<Task Type="timer"/>
 					</BackgroundTasks>

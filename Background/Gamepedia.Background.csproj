@@ -143,9 +143,9 @@
     </PackageReference>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Background.Leaguepedia\Gamepedia.Background.Leaguepedia.csproj">
+    <ProjectReference Include="..\Background.Lol\Gamepedia.Background.Lol.csproj">
       <Project>{d1c0a37d-7ed0-4bfe-825b-50474750a0cc}</Project>
-      <Name>Gamepedia.Background.Leaguepedia</Name>
+      <Name>Gamepedia.Background.Lol</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

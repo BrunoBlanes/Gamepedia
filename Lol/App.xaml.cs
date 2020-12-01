@@ -5,9 +5,8 @@ using Microsoft.UI.Xaml;
 
 using Windows.ApplicationModel;
 using Windows.ApplicationModel.Background;
-using Windows.Storage;
 
-namespace Gamepedia.Leaguepedia
+namespace Gamepedia.Lol
 {
 #nullable enable
 	/// <summary>
@@ -49,7 +48,7 @@ namespace Gamepedia.Leaguepedia
 			var taskRegistered = false;
 			await BackgroundExecutionManager.RequestAccessAsync();
 
-			foreach (var task in BackgroundTaskRegistration.AllTasks)
+			foreach (System.Collections.Generic.KeyValuePair<Guid, IBackgroundTaskRegistration> task in BackgroundTaskRegistration.AllTasks)
 			{
 				if (task.Value.Name == "LoadLeaguepediaData")
 				{
@@ -63,7 +62,7 @@ namespace Gamepedia.Leaguepedia
 				var builder = new BackgroundTaskBuilder
 				{
 					Name = "LoadLeaguepediaData",
-					TaskEntryPoint = "Gamepedia.Background.Leaguepedia.FetchData"
+					TaskEntryPoint = "Gamepedia.Background.Lol.FetchData"
 				};
 				builder.SetTrigger(new TimeTrigger(15, false));
 				builder.AddCondition(new SystemCondition(SystemConditionType.InternetAvailable));

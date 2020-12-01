@@ -8,8 +8,8 @@
     <ProjectGuid>{D1C0A37D-7ED0-4BFE-825B-50474750A0CC}</ProjectGuid>
     <OutputType>winmdobj</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Gamepedia.Background.Leaguepedia</RootNamespace>
-    <AssemblyName>Gamepedia.Background.Leaguepedia</AssemblyName>
+    <RootNamespace>Gamepedia.Background.Lol</RootNamespace>
+    <AssemblyName>Gamepedia.Background.Lol</AssemblyName>
     <DefaultLanguage>en-US</DefaultLanguage>
     <TargetPlatformIdentifier>UAP</TargetPlatformIdentifier>
     <TargetPlatformVersion Condition=" '$(TargetPlatformVersion)' == '' ">10.0.19041.0</TargetPlatformVersion>
@@ -97,9 +97,6 @@
     </PackageReference>
     <PackageReference Include="Microsoft.Toolkit.Uwp.Notifications">
       <Version>6.1.1</Version>
-    </PackageReference>
-    <PackageReference Include="System.Text.Json">
-      <Version>5.0.0</Version>
     </PackageReference>
   </ItemGroup>
   <ItemGroup>

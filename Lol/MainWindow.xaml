@@ -1,4 +1,4 @@
-﻿<Window x:Class="Gamepedia.Leaguepedia.MainWindow"
+﻿<Window x:Class="Gamepedia.Lol.MainWindow"
 		xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
 		xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
 		xmlns:models="using:Gamepedia.Core.Models"
@@ -11,7 +11,7 @@
 		</Grid.RowDefinitions>
 
 		<ListView Name="LeagueNewsListView"
-				  ItemsSource="{x:Bind News, Mode=OneWay}"
+				  ItemsSource="{x:Bind Leaguepedia.News, Mode=OneWay}"
 				  ScrollViewer.VerticalScrollBarVisibility="Auto"
 				  ScrollViewer.VerticalScrollMode="Enabled"
 				  HorizontalAlignment="Stretch">
@@ -19,12 +19,21 @@
 				<DataTemplate x:DataType="models:News">
 					<StackPanel Orientation="Horizontal">
 						<TextBlock Text="{x:Bind Region}"
+								   HorizontalAlignment="Center"
+								   VerticalAlignment="Center"
 								   Margin="6, 0"
-								   Width="30"/>
-						<TextBlock Text="{x:Bind Team}"
+								   Width="24"/>
+						<Image Source="{Binding Team.Logo, TargetNullValue={x:Null}}"
+							   HorizontalAlignment="Center"
+							   Stretch="Uniform"
+							   Margin="6, 0"
+							   Width="32"/>
+						<TextBlock Text="{x:Bind Team.Name}"
+								   VerticalAlignment="Center"
 								   Margin="6, 0"
-								   Width="50"/>
+								   Width="32"/>
 						<TextBlock Text="{x:Bind Event}"
+								   VerticalAlignment="Center"
 								   Margin="6, 0"/>
 					</StackPanel>
 				</DataTemplate>

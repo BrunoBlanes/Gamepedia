@@ -5,7 +5,7 @@ namespace Gamepedia.Background
 	/// <summary>
 	/// Provides application-specific behavior to supplement the default Application class.
 	/// </summary>
-	sealed partial class Main : Application
+	internal sealed partial class Main : Application
 	{
 		/// <summary>
 		/// Initializes the singleton application object.  This is the first line of authored code

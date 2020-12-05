@@ -9,13 +9,13 @@ using System.Text.Json;
 using System.Text.Json.Serialization;
 using System.Threading.Tasks;
 
-using Gamepedia.Lol.Api.Converters;
-using Gamepedia.Lol.Api.Interfaces;
-using Gamepedia.Lol.Api.Options;
+using Gamepedia.Lol.Client.Converters;
+using Gamepedia.Lol.Client.Interfaces;
+using Gamepedia.Lol.Client.Options;
 
 using Pluralize.NET.Core;
 
-namespace Gamepedia.Lol.Api.Extensions
+namespace Gamepedia.Lol.Client.Extensions
 {
 	public static class HttpClientExtensions
 	{

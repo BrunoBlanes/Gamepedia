@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace Gamepedia.Lol.Api.Extensions
+namespace Gamepedia.Lol.Client.Extensions
 {
 	public static class ArrayExtensions
 	{

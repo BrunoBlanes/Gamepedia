@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Gamepedia.Lol.Api.Models
+namespace Gamepedia.Lol.Client.Models
 {
 	public class Team
 	{

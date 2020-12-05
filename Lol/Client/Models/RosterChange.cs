@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text.Json.Serialization;
 
-using Gamepedia.Lol.Api.Extensions;
-using Gamepedia.Lol.Api.Interfaces;
+using Gamepedia.Lol.Client.Extensions;
+using Gamepedia.Lol.Client.Interfaces;
 
-namespace Gamepedia.Lol.Api.Models
+namespace Gamepedia.Lol.Client.Models
 {
 	public class RosterChange : ICargoTables
 	{

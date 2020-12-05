@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 	<PropertyGroup>
 		<!-- Development settings -->
 		<TargetPlatformMinVersion>10.0.19041.0</TargetPlatformMinVersion>
@@ -28,6 +28,6 @@
 
 	<ItemGroup>
 	  <ProjectReference Include="..\..\Core\Gamepedia.Core.csproj" />
-	  <ProjectReference Include="..\Api\Gamepedia.Lol.Api.csproj" />
+	  <ProjectReference Include="..\Client\Gamepedia.Lol.Client.csproj" />
 	</ItemGroup>
 </Project>

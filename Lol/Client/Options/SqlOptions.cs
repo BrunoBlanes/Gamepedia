@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using System.Linq.Expressions;
 using System.Text;
 
-using Gamepedia.Lol.Api.Extensions;
-using Gamepedia.Lol.Api.Interfaces;
+using Gamepedia.Lol.Client.Extensions;
+using Gamepedia.Lol.Client.Interfaces;
 
-namespace Gamepedia.Lol.Api.Options
+namespace Gamepedia.Lol.Client.Options
 {
 	public class SqlOptions<T> where T : ICargoTables
 	{

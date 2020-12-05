@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 
-namespace Gamepedia.Lol.Api.Extensions
+namespace Gamepedia.Lol.Client.Extensions
 {
 	public static class ListExtensions
 	{

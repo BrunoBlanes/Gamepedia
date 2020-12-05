@@ -5,7 +5,7 @@ using System.Reflection;
 using System.Text.Json;
 using System.Text.Json.Serialization;
 
-namespace Gamepedia.Lol.Api.Converters
+namespace Gamepedia.Lol.Client.Converters
 {
 	internal class InternalJsonConverter<T> : JsonConverter<T> where T : class, new()
 	{

@@ -2,8 +2,8 @@
 using System.Net.Http;
 using System.Threading.Tasks;
 
-using Gamepedia.Lol.Api.Extensions;
-using Gamepedia.Lol.Api.Models;
+using Gamepedia.Lol.Client.Extensions;
+using Gamepedia.Lol.Client.Models;
 
 namespace Gamepedia.Core.Services
 {

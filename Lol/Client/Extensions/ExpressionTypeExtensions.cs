@@ -1,6 +1,6 @@
 ﻿using System.Linq.Expressions;
 
-namespace Gamepedia.Lol.Api.Extensions
+namespace Gamepedia.Lol.Client.Extensions
 {
 	internal static class ExpressionTypeExtensions
 	{

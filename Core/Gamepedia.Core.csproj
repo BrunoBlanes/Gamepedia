@@ -9,7 +9,7 @@
 		<Nullable>enable</Nullable>
 	</PropertyGroup>
 	<ItemGroup>
-	  <ProjectReference Include="..\Lol\Api\Gamepedia.Lol.Api.csproj" />
+	  <ProjectReference Include="..\Lol\Client\Gamepedia.Lol.Client.csproj" />
 	</ItemGroup>
 	
 	<ItemGroup>

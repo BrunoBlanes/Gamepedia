@@ -27,6 +27,7 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <ProjectReference Include="..\Core\Gamepedia.Core.csproj" />
+	  <ProjectReference Include="..\..\Core\Gamepedia.Core.csproj" />
+	  <ProjectReference Include="..\Api\Gamepedia.Lol.Api.csproj" />
 	</ItemGroup>
 </Project>

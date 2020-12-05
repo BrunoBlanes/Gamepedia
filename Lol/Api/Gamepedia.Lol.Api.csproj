@@ -1,0 +1,26 @@
+<Project Sdk="Microsoft.NET.Sdk">
+	<PropertyGroup>
+		<!-- Development settings -->
+		<EnforceCodeStyleInBuild>true</EnforceCodeStyleInBuild>
+		<TargetFramework>netstandard2.0</TargetFramework>
+		<EnableNETAnalyzers>true</EnableNETAnalyzers>
+		<AnalysisLevel>preview</AnalysisLevel>
+		<LangVersion>preview</LangVersion>
+		<Nullable>enable</Nullable>
+	</PropertyGroup>
+
+	<PropertyGroup>
+		<!-- Package settings -->
+		<Version>0.1.0</Version>
+		<Authors>Bruno Blanes</Authors>
+		<PackageId>Gamepedia.Lol.Api</PackageId>
+		<RepositoryUrl>https://github.com/BrunoBlanes/Gamepedia</RepositoryUrl>
+		<PackageDescription>This package adds a wrapper on the Leaguepedia API.</PackageDescription>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<!-- Package references -->
+		<PackageReference Include="Pluralize.NET.Core" Version="1.0.0" />
+		<PackageReference Include="System.Text.Json" Version="5.0.0" />
+	</ItemGroup>
+</Project>

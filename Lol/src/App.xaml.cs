@@ -1,5 +1,7 @@
 ﻿using System;
 
+using Gamepedia.Core.Services;
+
 using Microsoft.Toolkit.Uwp.Notifications;
 using Microsoft.UI.Xaml;
 
@@ -43,12 +45,13 @@ namespace Gamepedia.Lol
 		/// <param name="args">Details about the launch request and process.</param>
 		protected override async void OnLaunched(LaunchActivatedEventArgs args)
 		{
+			await Leaguepedia.GetAsync();
 			window = new MainWindow();
 			window.Activate();
 			var taskRegistered = false;
 			await BackgroundExecutionManager.RequestAccessAsync();
 
-			foreach (System.Collections.Generic.KeyValuePair<Guid, IBackgroundTaskRegistration> task in BackgroundTaskRegistration.AllTasks)
+			foreach (var task in BackgroundTaskRegistration.AllTasks)
 			{
 				if (task.Value.Name == "LoadLeaguepediaData")
 				{

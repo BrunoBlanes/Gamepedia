@@ -143,15 +143,15 @@
     </PackageReference>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Background.Lol\Gamepedia.Background.Lol.csproj">
-      <Project>{d1c0a37d-7ed0-4bfe-825b-50474750a0cc}</Project>
-      <Name>Gamepedia.Background.Lol</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
     <AppxManifest Include="Package.appxmanifest">
       <SubType>Designer</SubType>
     </AppxManifest>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Lol\Gamepedia.Background.Lol.csproj">
+      <Project>{d1c0a37d-7ed0-4bfe-825b-50474750a0cc}</Project>
+      <Name>Gamepedia.Background.Lol</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
     <VisualStudioVersion>14.0</VisualStudioVersion>

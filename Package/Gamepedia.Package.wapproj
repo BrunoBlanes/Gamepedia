@@ -55,7 +55,7 @@
     <TargetPlatformMinVersion>10.0.19041.0</TargetPlatformMinVersion>
     <DefaultLanguage>en-US</DefaultLanguage>
     <AppxPackageSigningEnabled>false</AppxPackageSigningEnabled>
-    <EntryPointProjectUniqueName>..\Lol\Gamepedia.Lol.csproj</EntryPointProjectUniqueName>
+    <EntryPointProjectUniqueName>..\Lol\src\Gamepedia.Lol.csproj</EntryPointProjectUniqueName>
   </PropertyGroup>
   <ItemGroup>
     <AppxManifest Include="Package.appxmanifest">
@@ -72,8 +72,8 @@
     <Content Include="Images\Wide310x150Logo.scale-200.png" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Background\Gamepedia.Background.csproj" />
-    <ProjectReference Include="..\Lol\Gamepedia.Lol.csproj">
+    <ProjectReference Include="..\Background\src\Gamepedia.Background.csproj" />
+    <ProjectReference Include="..\Lol\src\Gamepedia.Lol.csproj">
       <SkipGetTargetFrameworkProperties>True</SkipGetTargetFrameworkProperties>
     </ProjectReference>
   </ItemGroup>
